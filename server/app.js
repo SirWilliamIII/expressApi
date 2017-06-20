@@ -1,15 +1,12 @@
 const express = require('express');
-
 const app = express();
+const routes = require('./routes');
 
 const port = process.env.PORT || 8080;
 
-app.get('/', (req, res) => {
-				res.json({
-								message: 'Killlin It'
-				});
+app.use('/api', (req, res) => {
+
 });
 
-app.listen(port, () => {
-				console.log(`App listening on port ${port}`);
-})
+export default app;
+
